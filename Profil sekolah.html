@@ -1,0 +1,575 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sman 3 Cikampek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#fff;
+      --radius:8px;
+      --shadow:0 6px 18px rgba(0,0,0,0.08);
+      --accent:#275ba8;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    
+    html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+    body {
+      margin:0;
+      background: var(--bg);
+      color:#1f2d3a;
+      line-height:1.4;
+      
+    }
+    header {
+      position: relative;
+      padding: 20px 30px;
+      background: linear-gradient(135deg,#366fb5,#62a0e8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap:10px;
+    }
+    header h1 {
+      margin:0;
+      font-size: 1.4rem;
+    }
+    .logo-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+    .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      background:#fff;
+      padding:4px;
+      box-shadow: var(--shadow);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px 25px;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top:10px;
+    }
+    table, th, td {
+      border: 1px solid #cfd8e4;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input[type=text],
+    input[type=number],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bfcbdc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: filter .2s;
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+    .center {
+      text-align: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .modal h2 {
+      margin-top:0;
+      font-size: 1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top:10px;
+      right:10px;
+      background: transparent;
+      border: none;
+      font-size:1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <!-- Navbar dengan icon garis tiga -->
+  <div class="navbar">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <span class="navbar-title">SMAN 3 CIKAMPEK</span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+
+  <div class="sidebar-logo">
+    <img src="logo.jpg" alt="Logo SMAN 3 Cikampek">
+  </div>
+    
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="index.html">MENU</a>
+    <a href="Profil sekolah.html">PROFIL SEKOLAH</a>
+    <a href="Berita.html">BERITA SEKOLAH</a>
+    <a href="Daftar guru.html">DAFTAR GURU </a>
+    <a href="eskul.html">DAFTAR ESKUL</a>
+  </div>
+    <div class="logo-wrapper" aria-label="Logo Sekolah">
+      <img src="sekolah/sman3.jpg" alt="Logo Sekolah" id="logoSekolah">
+
+    </div>
+  </header>
+</div>
+<div>
+  
+<marquee style="color: black ; font-weight: bold; margin-left: 1px; width: 350px;">
+    SELAMAT DATANG DI WEB SMAN 3 CIKAMPEK
+  </marquee>
+</div>
+  
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+</script>
+
+<style> 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4a90e2;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  height : auto ;
+  z-index : 9 ;
+}
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 200px;   /* atur ukuran logo */
+  height: auto;
+  border-radius: 10px; /* opsional, biar sudut agak melengkung */
+}
+
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+</style>
+
+<style>
+  
+  .sejarah-section {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .sejarah-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  .sejarah-image {
+    width: 100%;
+    max-width: 400px; /* Ukuran gambar dibatasi */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto 24px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .subjudul {
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .judul-sejarah {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .sejarah-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  .sejarah-text strong {
+    color: #000;
+  }
+</style>
+
+ <!-- Tambahkan di dalam <body> -->
+<section class="sejarah-section">
+  <div class="sejarah-container">
+    <!-- Foto Sekolah -->
+    <img src="pintu.jpg" alt="Foto SMAN 3 Cikampek" class="sejarah-image">
+
+    <!-- Teks Sejarah -->
+    <div class="sejarah-text">
+      <h2 class="subjudul">Sejarah</h2>
+      <h1 class="judul-sejarah">Sejarah SMAN 3 Cikampek</h1>
+      <p>
+        <strong>SMAN 3 Cikampek</strongSeiring> banyaknya calon peserta didik yang ingin bersekolah di SMA Negeri 2 Cikampek, sementara kuota nya terbatas sesuai dengan sarana dan sarana yang ada di sekolah. Akhirnya atas prakarta Kepala Sekolah SMA Negeri 2 Cikampek  pada waktu itu yaitu Bapak Drs. Priatnadi, M.Pd dan dibantu oleh guru-guru senior akhir nya pada tanggal 18 Juni 2015 di SMA Negeri 3 Cikampek telah sah untuk menampung peserta didik yang tidak bisa tertampung di SMA Negeri 2 Cikampek. </p>
+       
+         <strong>SMA Negeri 3 Cikampek</strong>, 
+         Alhamdulillah Bupati Karawang dr. Cellica pun merestuinya. Dengan dikeluarkannya Keputusan Bupati Karawang Nomor : 425.11/Kep. 500-HUK/2-15 ter tanggal 18 Juni 2015. Walaupun untuk sementara ruang belajar masih di SMA Negeri 2 Cikampek
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 8px;
+  word-wrap: break-word;   /* biar teks panjang bisa turun ke bawah */
+  white-space: normal;     /* teks bisa wrap */
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+}
+
+
+
+</style>
+
+<main>
+  <div style="overflow-x:auto;">
+ 
+<div class="table-responsive">
+  
+  <h2>Profil Sekolah</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>Nama Sekolah</strong></td>
+        <td>: SMAN 3 CIKAMPEK</td>
+      </tr>
+      <tr>
+        <td><strong>NSS</strong></td>
+        <td>: -</td>
+      </tr>
+      <tr>
+        <td><strong>NPSN</strong></td>
+        <td>: 69915812</td>
+      </tr>
+      <tr>
+        <td><strong>Status Sekolah</strong></td>
+        <td>: Negeri</td>
+      </tr>
+      <tr>
+        <td><strong>Bentuk Pendidikan</strong></td>
+        <td>: SMA</td>
+      </tr>
+      <tr>
+        <td><strong>Alamat</strong></td>
+        <td>: JALAN DAWUAN TIMUR NO. 165</td>
+      </tr>
+      <tr>
+        <td><strong>RT / RW</strong></td>
+        <td>: 3 / 1</td>
+      </tr>
+      <tr>
+        <td><strong>Nama Dusun</strong></td>
+        <td>: Dawuan Tengah</td>
+      </tr>
+      <tr>
+        <td><strong>Desa/Kelurahan</strong></td>
+        <td>: Dawuan Tengah</td>
+      </tr>
+      <tr>
+        <td><strong>Kode Pos</strong></td>
+        <td>: 41373</td>
+      </tr>
+      <tr>
+        <td><strong>Kecamatan</strong></td>
+        <td>: Kec. Cikampek</td>
+      </tr>
+      <tr>
+        <td><strong>Kabupaten/Kota</strong></td>
+        <td>: Kab. Karawang</td>
+      </tr>
+      <tr>
+        <td><strong>Propinsi</strong></td>
+        <td>: Prop. Jawa Barat</td>
+      </tr>
+      <tr>
+        <td><strong>Nomor Telepon</strong></td>
+        <td>: 089675586503</td>
+      </tr>
+      <tr>
+        <td><strong>Nomor Fax</strong></td>
+        <td>: 089631933304</td>
+      </tr>
+      <tr>
+        <td><strong>Email</strong></td>
+        <td>: sman3negachie@gmail.com</td>
+      </tr>
+      <tr>
+        <td><strong>Website</strong></td>
+        <td>: <a href="https://sman3cikampek.sch.id" target="_blank">sman3cikampek.sch.id</a></td>
+      </tr>
+      <tr>
+        <td><strong>SK Pendirian Sekolah</strong></td>
+        <td>: 420/1625-DISDIKPORA</td>
+      </tr>
+      <tr>
+        <td><strong>Tanggal SK Pendirian</strong></td>
+        <td>: 2015-06-11</td>
+      </tr>
+      <tr>
+        <td><strong>SK Izin Operasional</strong></td>
+        <td>: 425.1/KEP.500-HUK/2015</td>
+      </tr>
+      <tr>
+        <td><strong>Tanggal SK Izin Operasional</strong></td>
+        <td>: 2015-06-18</td>
+      </tr>
+      <tr>
+        <td><strong>SK Akreditasi</strong></td>
+        <td>: 420/1625-BAN/2018</td>
+      </tr>
+      <tr>
+        <td><strong>Tanggal SK Akreditasi</strong></td>
+        <td>: 2016-02-15</td>
+      </tr>
+  </table>
+  </div>
+</section>
+<!-- Section Lokasi -->
+<section style="padding: 20px; text-align: center;">
+  <!-- Foto Lokasi -->
+  <img src="maps.jpg" alt="Lokasi SMAN 3 Cikampek" 
+       style="max-width: 100%; border-radius: 15px; margin-bottom: 15px;">
+
+  <!-- Judul -->
+  <h2 style="margin-bottom: 10px;">Lokasi SMAN 3 Cikampek</h2>
+
+  <!-- Alamat -->
+  <p style="font-size: 16px; line-height: 1.6;">
+    Jl. Blok A, Dawuan Tengah, Kec. Cikampek, <br>
+    Kabupaten Karawang, Jawa Barat 41373
+  </p>
+
+  <!-- (Opsional) Link ke Google Maps -->
+  <a href="https://maps.app.goo.gl/qrPFFJ3ebuoh9iDr9" target="_blank" 
+     style="display: inline-block; margin-top: 10px; 
+            padding: 10px 20px; background: #2d89ef; color: #fff; 
+            text-decoration: none; border-radius: 8px;">
+    Lihat di Google Maps
+  </a>
+</section>
+  <style>
+   
+    }
+    h1 {
+      text-align: center;
+      color: #0056a3;
+    }
+    h2 {
+      color: #0073e6;
+      margin-top: 30px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .motto strong {
+      display: inline-block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Visi, Misi, Tujuan, Sasaran dan Motto<br>SMAN 3 CIKAMPEK</h1>
+
+  <h2>VISI</h2>
+  <p>Terwujudnya peserta didik yang religius, cerdas, dan cakap sesuai profil pelajar Pancasila</p>
+
+  <h2>MISI</h2>
+  <ul>
+    <li>Meningkatkan kepribadian dan perilaku yang baik</li>
+    <li>Menciptakan lingkungan sekolah yang aman, tertib, nyaman, dan harmonis</li>
+    <li>Membina prestasi melalui pembelajaran yang efektif, efisien, ramah, dan menyenangkan</li>
+    <li>Mengembangkan semangat inovatif, kreatif, kritis, dan berkebinekaan global</li>
+    <li>Menciptakan sikap mandiri dan budaya gotong royong</li>
+    <li>Menanamkan cinta budaya bangsa melalui kegiatan seni dan budaya</li>
+  </ul>
+
+  <h2>TUJUAN</h2>
+  <p>
+    “Mewujudkan peserta didik yang berakhlak mulia, berprestasi secara akademik dan nonakademik, 
+    serta mengembangkan kecakapan hidup yang berkualitas sesuai profil pelajar Pancasila”
+  </p>
+
+  <h2>SASARAN</h2>
+  <ul>
+    <li>Tersedianya jumlah ruang belajar yang memadai sesuai dengan jumlah rombongan belajar dan tuntutan pedoman sekolah unggul</li>
+    <li>Tercapainya tingkat kelulusan peserta didik sebesar 100%</li>
+    <li>Terwujudnya prestasi sebesar 30% pada lomba akademik dan nonakademik eksternal, minimal masuk 10 besar pada tingkat kabupaten</li>
+    <li>Terwujudnya prestasi sebesar 20% pada lomba akademik dan nonakademik eksternal, minimal masuk 10 besar pada tingkat provinsi</li>
+    <li>Tercapainya kelengkapan sarana prasarana ruang belajar berbasis TIK sebesar 50%</li>
+  </ul>
+
+  <h2>MOTTO</h2>
+  <div class="motto">
+    <strong>PROGRESIF</strong><br>
+    Pantang menyerah, Rasional, Optimis, Gesit, Religius, Empatik, Semangat, Inovatif, Fleksibel
+  </div>
+
+</body>
+</html>

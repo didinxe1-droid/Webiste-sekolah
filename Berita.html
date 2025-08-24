@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sman 3 Cikampek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#fff;
+      --radius:8px;
+      --shadow:0 6px 18px rgba(0,0,0,0.08);
+      --accent:#275ba8;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    body {
+      margin:0;
+      background: var(--bg);
+      color:#1f2d3a;
+      line-height:1.4;
+    }
+    header {
+      position: relative;
+      padding: 20px 30px;
+      background: linear-gradient(135deg,#366fb5,#62a0e8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap:10px;
+    }
+    header h1 {
+      margin:0;
+      font-size: 1.4rem;
+    }
+    .logo-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+    .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      background:#fff;
+      padding:4px;
+      box-shadow: var(--shadow);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px 25px;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top:10px;
+    }
+    table, th, td {
+      border: 1px solid #cfd8e4;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input[type=text],
+    input[type=number],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bfcbdc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: filter .2s;
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+    .center {
+      text-align: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .modal h2 {
+      margin-top:0;
+      font-size: 1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top:10px;
+      right:10px;
+      background: transparent;
+      border: none;
+      font-size:1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <!-- Navbar dengan icon garis tiga -->
+  <div class="navbar">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <span class="navbar-title">SMAN 3 CIKAMPEK</span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+
+  <div class="sidebar-logo">
+    <img src="logo.jpg" alt="Logo SMAN 3 Cikampek">
+  </div>
+    
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="index.html">MENU</a>
+    <a href="Profil sekolah.html">PROFIL SEKOLAH</a>
+    <a href="Berita.html">BERITA SEKOLAH</a>
+    <a href="Daftar guru.html">DAFTAR GURU </a>
+    <a href="Eskul.html">DAFTAR ESKUL</a>
+  </div>
+    <div class="logo-wrapper" aria-label="Logo Sekolah">
+      <img src="sekolah/sman3.jpg" alt="Logo Sekolah" id="logoSekolah">
+
+    </div>
+  </header>
+</div>
+<div>
+  
+<marquee style="color: black ; font-weight: bold; margin-left: 1px; width: 350px;">
+    SELAMAT DATANG DI WEB SMAN 3 CIKAMPEK
+  </marquee>
+</div>
+  
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+</script>
+
+<style> 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4a90e2;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  height : auto ;
+  z-index : 9 ;
+}
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 200px;   /* atur ukuran logo */
+  height: auto;
+  border-radius: 10px; /* opsional, biar sudut agak melengkung */
+}
+
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+</style>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Berita Terbaru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#1e5aa7; 
+    --text:#1f2a37;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --radius:18px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:Inter,system-ui; color:var(--text); background:var(--bg);}
+  .container{max-width:980px; margin-inline:auto; padding:28px 16px;}
+  h1{font-size:clamp(28px,4vw,40px); margin:0 0 20px; color:var(--primary);}
+  .news-list{ display:grid; gap:28px; }
+  .news-card{ position:relative; background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:0 8px 24px rgba(2,6,23,.06); padding:0 0 16px; }
+  .cover{ position:relative; aspect-ratio:16/9; background:#cfd8e3; overflow:hidden;}
+  .cover img{ width:100%; height:100%; object-fit:cover; display:block;}
+  .category{ position:absolute; left:12px; top:12px; background:#113c72; color:#fff; font-weight:700; font-size:12px; padding:6px 10px; border-radius:999px; }
+  .date-badge{ position:absolute; left:-56px; top:18px; width:140px; height:140px; border-radius:50%; background:#fff; box-shadow:0 10px 30px rgba(2,6,23,.08); display:flex; align-items:center; justify-content:center; }
+  .date-badge .inner{ width:116px; height:116px; border-radius:50%; background:var(--primary); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .date-badge .day{ font-size:44px; font-weight:800;}
+  .date-badge .month{ font-size:12px; margin-top:6px;}
+  .content{ padding:20px 18px 4px 18px;}
+  .title{ font-size:clamp(18px,3.3vw,28px); line-height:1.25; margin:16px 0 10px; font-weight:800; color:#194070; text-decoration:none; display:block;}
+  .excerpt{ opacity:.9; line-height:1.6;}
+  .comment-count{ position:absolute; left:56px; top:156px; width:56px; height:56px; border-radius:50%; background:var(--primary); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center;}
+  .divider{ height:3px; width:92%; margin:18px auto 0; background:#dbe4f0; border-radius:3px;}
+  @media (max-width:720px){
+    .date-badge{ left:-34px; width:112px; height:112px; }
+    .date-badge .inner{ width:92px; height:92px;}
+    .date-badge .day{ font-size:34px }
+    .comment-count{ left:44px; top:132px; width:48px; height:48px; }
+  }
+</style>
+</head>
+<body>
+  <section class="container">
+    <h1>Berita Terbaru</h1>
+    <div class="news-list">
+
+      <!-- ITEM 1 -->
+      <article class="news-card">
+        <div class="date-badge"><div class="inner"><div class="day">12</div><div class="month">JAN 2023</div></div></div>
+        <div class="comment-count">0</div>
+        <div class="cover">
+          <span class="category">Uncategorized</span>
+          <img src="komite.jpg" alt="Sosialisasi Program Sekolah" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">SMAN 3 Cikampek Karawang Gelar Sosialisasi Program Sekolah dan Rapat Komite</a>
+          <p class="excerpt">SMAN 3 Cikampek menggelar sosialisasi program sekolah serta rapat komite guna membahas partisipasi orang tua murid dalam mendukung pendidikan nasional…</p>
+          <div class="divider"></div>
+        </div>
+      </article>
+
+      <!-- ITEM 2 -->
+      <article class="news-card">
+        <div class="date-badge"><div class="inner"><div class="day">1</div><div class="month">NOV 2022</div></div></div>
+        <div class="comment-count">0</div>
+        <div class="cover">
+          <span class="category">Uncategorized</span>
+          <img src="medali.png" alt="Prestasi OBI" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">Mantul: Siswa-Siswi SMAN 3 Cikampek Memborong Medali di Ajang OBI & Telkom University Competition</a>
+          <p class="excerpt">Aisya Maulina Triono kelas XI-MIPA-5 berhasil meraih medali perunggu pada Olimpiade Biologi Indonesia (OBI) di Bandung. Kepala sekolah menyampaikan rasa bangga atas prestasi tersebut…</p>
+          <div class="divider"></div>
+        </div>
+      </article>
+
+      <!-- ITEM 3 (baru ditambahkan) -->
+      <article class="news-card">
+        <div class="date-badge"><div class="inner"><div class="day">20</div><div class="month">SEP 2022</div></div></div>
+        <div class="comment-count">0</div>
+        <div class="cover">
+          <span class="category">Uncategorized</span>
+          <img src="Ujian.jpeg" alt="Lomba Debat" />
+        </div>
+        <div class="content">
+          <a href="#" class="title">Sman 3 cikampek gelar ISTIGHOSAH menjelang ujian sekolah</a>
+          <p class="excerpt">Cikampek – Keharuan mewarnai acara istighotsah dan doa bersama yang dilakukan pelajar SMA Negeri 3 Cikampek Kamis (10/3/2022) di lapangan olah raga. Sebanyak 161 siswa kelas 12 hadir dalam acara yang digelar sebagai persiapan menjelang Ujian Sekolah ini. Dalam acara doa bersama itu, para siswa tak kuasa menahan tangis saat memanjatkan doa kepada Alah SWT Tuhan Maha Esa. Mereka saling...</p>
+          <div class="divider"></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</body>
+</html>

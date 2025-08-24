@@ -1,0 +1,409 @@
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sman 3 Cikampek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#fff;
+      --radius:8px;
+      --shadow:0 6px 18px rgba(0,0,0,0.08);
+      --accent:#275ba8;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    body {
+      margin:0;
+      background: var(--bg);
+      color:#1f2d3a;
+      line-height:1.4;
+    }
+    header {
+      position: relative;
+      padding: 20px 30px;
+      background: linear-gradient(135deg,#366fb5,#62a0e8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap:10px;
+    }
+    header h1 {
+      margin:0;
+      font-size: 1.4rem;
+    }
+    .logo-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+    .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      background:#fff;
+      padding:4px;
+      box-shadow: var(--shadow);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px 25px;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top:10px;
+    }
+    table, th, td {
+      border: 1px solid #cfd8e4;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input[type=text],
+    input[type=number],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bfcbdc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: filter .2s;
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+    .center {
+      text-align: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .modal h2 {
+      margin-top:0;
+      font-size: 1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top:10px;
+      right:10px;
+      background: transparent;
+      border: none;
+      font-size:1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <!-- Navbar dengan icon garis tiga -->
+  <div class="navbar">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <span class="navbar-title">SMAN 3 CIKAMPEK</span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+
+  <div class="sidebar-logo">
+    <img src="logo.jpg" alt="Logo SMAN 3 Cikampek">
+  </div>
+    
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="index.html">MENU</a>
+    <a href="Profil sekolah.html">PROFIL SEKOLAH</a>
+    <a href="Berita.html">BERITA SEKOLAH</a>
+    <a href="Daftar guru.html">DAFTAR GURU </a>
+    <a href="eskul.html">DAFTAR ESKUL</a>
+  </div>
+    <div class="logo-wrapper" aria-label="Logo Sekolah">
+      <img src="sekolah/sman3.jpg" alt="Logo Sekolah" id="logoSekolah">
+
+    </div>
+  </header>
+</div>
+<div>
+  
+<marquee style="color: black ; font-weight: bold; margin-left: 1px; width: 350px;">
+    SELAMAT DATANG DI WEB SMAN 3 CIKAMPEK
+  </marquee>
+</div>
+  
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+</script>
+
+<style> 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4a90e2;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  height : auto ;
+  z-index : 9 ;
+}
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 200px;   /* atur ukuran logo */
+  height: auto;
+  border-radius: 10px; /* opsional, biar sudut agak melengkung */
+}
+
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+</style>
+
+<h2 class="page-title">Daftar Ekstrakurikuler SMAN 3 Cikampek</h2>
+
+<div class="eskul-container">
+
+  <!-- Eskul 1 -->
+  <div class="eskul-item">
+    <img src="jurnal.jpg" alt="Jurnalistik" class="eskul-logo">
+    <span class="eskul-nama">Jurnalistik</span>
+  </div>
+
+
+<style>
+.page-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #1a4dab;
+}
+
+.eskul-container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.eskul-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.eskul-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.eskul-nama {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+</style>
+
+<div class="eskul-container">
+
+  <!-- Eskul 2 -->
+  <div class="eskul-item">
+    <img src="jepang.jpg" alt="Komunitas Bahasa Jepang" class="eskul-logo">
+    <span class="eskul-nama">Komunitas Bahasa Jepang</span>
+  </div>
+
+  <!-- Eskul 3 -->
+  <div class="eskul-item">
+    <img src="pmi.jpg" alt="Palang Merah Indonesia" class="eskul-logo">
+    <span class="eskul-nama">Palang Merah Indonesia (PMI)</span>
+  </div>
+
+  <!-- Eskul 4 -->
+  <div class="eskul-item">
+    <img src="irma.jpg" alt="Ikatan Remaja Masjid" class="eskul-logo">
+    <span class="eskul-nama">Ikatan Remaja Masjid (IRMA)</span>
+  </div>
+
+  <!-- Eskul 5 -->
+  <div class="eskul-item">
+    <img src="pramuka.jpg" alt="Pramuka" class="eskul-logo">
+    <span class="eskul-nama">Pramuka</span>
+  </div>
+
+  <!-- Eskul 6 -->
+  <div class="eskul-item">
+    <img src="tari.jpg" alt="Dance Club" class="eskul-logo">
+    <span class="eskul-nama">Smantiga Tari Club</span>
+  </div>
+
+  <!-- Eskul 7 -->
+  <div class="eskul-item">
+    <img src="futsal.jpg" alt="Futsal" class="eskul-logo">
+    <span class="eskul-nama">Futsal</span>
+  </div>
+
+  <!-- Eskul 8 -->
+  <div class="eskul-item">
+    <img src="volly.jpg" alt="Volleyball" class="eskul-logo">
+    <span class="eskul-nama">Volleyball</span>
+  </div>
+
+</div>
+
+<style>
+.page-title {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #1a4dab;
+}
+
+.eskul-container {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.eskul-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.eskul-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.eskul-nama {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+</style>

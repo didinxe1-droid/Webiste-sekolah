@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="id">
+  <head>
+  <meta charset="UTF-8" />
+  <title>Sman 3 Cikampek</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+<style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#fff;
+      --radius:8px;
+      --shadow:0 6px 18px rgba(0,0,0,0.08);
+      --accent:#275ba8;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    body {
+      margin:0;
+      background: var(--bg);
+      color:#1f2d3a;
+      line-height:1.4;
+    }
+    header {
+      position: relative;
+      padding: 20px 30px;
+      background: linear-gradient(135deg,#366fb5,#62a0e8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap:10px;
+    }
+    header h1 {
+      margin:0;
+      font-size: 1.4rem;
+    }
+    .logo-wrapper {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 70px;
+      height: 70px;
+      margin-right: 10px;
+    }
+    .logo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      background:#fff;
+      padding:4px;
+      box-shadow: var(--shadow);
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px 25px;
+      box-shadow: var(--shadow);
+      margin-bottom: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top:10px;
+    }
+    table, th, td {
+      border: 1px solid #cfd8e4;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    input[type=text],
+    input[type=number],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #bfcbdc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: filter .2s;
+    }
+    .btn:hover {
+      filter: brightness(1.1);
+    }
+    .center {
+      text-align: center;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset:0;
+      background: rgba(0,0,0,0.35);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .modal {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .modal h2 {
+      margin-top:0;
+      font-size: 1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top:10px;
+      right:10px;
+      background: transparent;
+      border: none;
+      font-size:1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+  <!-- Navbar dengan icon garis tiga -->
+  <div class="navbar">
+    <span class="menu-icon" onclick="openNav()">&#9776;</span>
+    <span class="navbar-title">SMAN 3 CIKAMPEK</span>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+
+  <div class="sidebar-logo">
+    <img src="logo.jpg" alt="Logo SMAN 3 Cikampek">
+  </div>
+    
+    <span class="closebtn" onclick="closeNav()">&times;</span>
+    <a href="index.html">MENU</a>
+    <a href="Profil sekolah.html">PROFIL SEKOLAH</a>
+    <a href="Berita.html">BERITA SEKOLAH</a>
+    <a href="Daftar guru.html">DAFTAR GURU </a>
+    <a href="Eskul.html">DAFTAR ESKUL</a>
+  </div>
+    <div class="logo-wrapper" aria-label="Logo Sekolah">
+      <img src="sekolah/sman3.jpg" alt="Logo Sekolah" id="logoSekolah">
+
+    </div>
+  </header>
+</div>
+<div>
+  
+<marquee style="color: black ; font-weight: bold; margin-left: 1px; width: 350px;">
+    SELAMAT DATANG DI WEB SMAN 3 CIKAMPEK
+  </marquee>
+</div>
+  
+</div>
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  }
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+</script>
+
+<style> 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #;
+  color: white;
+  padding: 10px 20px;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #4a90e2;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  height : auto ;
+  z-index : 9 ;
+}
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-logo img {
+  width: 200px;   /* atur ukuran logo */
+  height: auto;
+  border-radius: 10px; /* opsional, biar sudut agak melengkung */
+}
+
+.sidebar a {
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #2563eb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+</style>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daftar Guru SMAN 3 Cikampek</title>
+<style>
+  
+  }
+  h1{
+    text-align:center;
+    color:#1e40af;
+    margin-bottom:30px;
+  }
+  .teacher-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom:24px;
+    overflow:hidden;
+    max-width:400px;
+    margin-inline:auto;
+  }
+  .teacher-photo{
+    text-align:center;
+    padding:16px;
+  }
+  .teacher-photo img{
+    max-width:70%; /* supaya foto tidak terlalu besar */
+    height:auto;
+    border-radius:8px;
+  }
+  .teacher-info{
+    padding:16px 20px;
+  }
+  .teacher-info h2{
+    margin:0 0 12px;
+    font-size:18px;
+    font-weight:700;
+    color:#1e40af;
+    text-align:center;
+  }
+  .teacher-info table{
+    border-collapse:collapse;
+    width:100%;
+  }
+  .teacher-info td{
+    padding:6px 4px;
+    vertical-align:top;
+    font-size:15px;
+  }
+  .teacher-info td:first-child{
+    font-weight:bold;
+    width:120px;
+    color:#374151;
+  }
+</style>
+<head>
+
+<h1>Daftar Guru SMAN 3 Cikampek</h1>
+
+<!-- GURU 1 -->
+<div class="teacher-card">
+  <div class="teacher-photo">
+    <img src="Hamzah.jpeg" alt="Foto Guru">
+  </div>
+  <div class="teacher-info">
+    <h2>Hamzah Arfianto, S.Pd.</h2>
+    <table>
+      <tr><td>NIK</td><td>3215132307980005</td></tr>
+      <tr><td>NIP</td><td>-</td></tr>
+      <tr><td>NUPTK</td><td>-</td></tr>
+      <tr><td>Jenis Kelamin</td><td>Laki-Laki</td></tr>
+      <tr><td>T.T.L</td><td>Jakarta / 23 Juli 1998</td></tr>
+      <tr><td>Agama</td><td>Islam</td></tr>
+      <tr><td>Pendidikan</td><td>S1</td></tr>
+      <tr><td>Jurusan</td><td>Pendidikan Matematika</td></tr>
+      <tr><td>Status</td><td>Guru Honor Provinsi</td></tr>
+      <tr><td>Jenis GTK</td><td>Guru Mapel</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Guru 1: S.Kom., M.M -->
+<div class="guru-profile">
+  <img src="tresa.jpg" alt="Foto Guru S.Kom., M.M" class="guru-foto">
+  <h3>S.Kom., M.M</h3>
+  <table>
+    <tr><td>NIK</td><td>: 1233</td></tr>
+    <tr><td>NIP</td><td>: 19760807 200902 1 001</td></tr>
+    <tr><td>NUPTK</td><td>: 123</td></tr>
+    <tr><td>Jenis Kelamin</td><td>: Laki-laki</td></tr>
+    <tr><td>T.T.L</td><td>: Karawang, 07 Agustus 1976</td></tr>
+    <tr><td>Agama</td><td>: Islam</td></tr>
+    <tr><td>Pendidikan</td><td>: S1</td></tr>
+    <tr><td>Jurusan</td><td>: Manajemen Informatika</td></tr>
+    <tr><td>Status</td><td>: PNS</td></tr>
+    <tr><td>Jenis GTK</td><td>: Guru Mapel TIK</td></tr>
+  </table>
+</div>
+
+<!-- Guru 2: Arif Rangga -->
+<div class="guru-profile">
+  <img src="arif.jpg" alt="Foto Arif Rangga" class="guru-foto">
+  <h3>Arif Rangga, S.Pd</h3>
+  <table>
+    <tr><td>NIK</td><td>: 3215132905940002</td></tr>
+    <tr><td>NIP</td><td>: -</td></tr>
+    <tr><td>NUPTK</td><td>: 8861772673130062</td></tr>
+    <tr><td>Jenis Kelamin</td><td>: Laki-laki</td></tr>
+    <tr><td>T.T.L</td><td>: Bandung, 29 Mei 1994</td></tr>
+    <tr><td>Agama</td><td>: Islam</td></tr>
+    <tr><td>Pendidikan</td><td>: S1</td></tr>
+    <tr><td>Jurusan</td><td>: Pendidikan Biologi</td></tr>
+    <tr><td>Status</td><td>: Guru Honor Provinsi</td></tr>
+    <tr><td>Jenis GTK</td><td>: Guru Mapel</td></tr>
+  </table>
+</div>
+
+<!-- CSS -->
+<style>
+.guru-profile {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.guru-foto {
+  width: 180px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.guru-profile h3 {
+  margin: 5px 0 10px 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.guru-profile table {
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.guru-profile table td {
+  padding: 3px 5px;
+  vertical-align: top;
+}
+</style>
